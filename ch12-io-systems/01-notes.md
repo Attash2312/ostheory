@@ -27,8 +27,7 @@ Original, exam-focused notes (not copied). High-yield because exams ask **interr
 
 ```mermaid
 flowchart LR
-  DEV[Device] <--> CTRL[Controller
-regs + buffer] <--> BUS[Bus] <--> CPU[CPU]
+  DEV[Device] <--> CTRL["Controller<br/>regs + buffer"] <--> BUS[Bus] <--> CPU[CPU]
   CPU <--> MEM[Main Memory]
 ```
 

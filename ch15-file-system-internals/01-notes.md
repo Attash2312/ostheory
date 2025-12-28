@@ -30,8 +30,8 @@ Disk I/O is slow; cache turns many reads into memory hits.
 ```mermaid
 sequenceDiagram
   participant App
-  participant Cache as Page/Buffer Cache
-  participant FS as File System
+  participant Cache as "Page/Buffer Cache"
+  participant FS as "File System"
   participant Disk
 
   App->>FS: read(fd, n)

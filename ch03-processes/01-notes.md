@@ -80,12 +80,9 @@ flowchart TB
   PCB --> PID[PID & State]
   PCB --> CPU[PC + Registers]
   PCB --> Sched[Priority + Queue links]
-  PCB --> Mem[Memory info
-(page table / base-limit)]
-  PCB --> IO[I/O info
-(open files, devices)]
-  PCB --> Acc[Accounting
-(CPU time, owner)]
+  PCB --> Mem["Memory info<br/>(page table / base-limit)"]
+  PCB --> IO["I/O info<br/>(open files, devices)"]
+  PCB --> Acc["Accounting<br/>(CPU time, owner)"]
 ```
 
 ---

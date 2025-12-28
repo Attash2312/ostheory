@@ -37,11 +37,8 @@ OS provides services to **users** and **programs**:
 ### Diagram: services as a layer
 ```mermaid
 flowchart TB
-  U[Users / Applications] --> S[OS Services
-(UI, exec, I/O, files, IPC, errors,
-allocation, accounting, protection)]
-  S --> K[Kernel mechanisms
-(scheduling, MMU, drivers, FS)]
+  U[Users / Applications] --> S["OS Services<br/>(UI, exec, I/O, files, IPC, errors,<br/>allocation, accounting, protection)"]
+  S --> K["Kernel mechanisms<br/>(scheduling, MMU, drivers, FS)"]
   K --> H[Hardware]
 ```
 
@@ -73,9 +70,9 @@ A **system call** is a controlled entry into the kernel so a user program can re
 ```mermaid
 sequenceDiagram
   participant App as Application
-  participant API as Library/API
+  participant API as "Library/API"
   participant K as Kernel
-  participant Dev as Device/FS
+  participant Dev as "Device/FS"
 
   App->>API: e.g., fopen()/read()
   API->>K: system call trap
@@ -112,8 +109,7 @@ Typical categories:
 ### Diagram: where system programs sit
 ```mermaid
 flowchart TB
-  A[Applications] --> SP[System Programs
-(shell, compiler, utilities)]
+  A[Applications] --> SP["System Programs<br/>(shell, compiler, utilities)"]
   SP --> K[Kernel]
   K --> H[Hardware]
 ```
@@ -160,8 +156,7 @@ Why separate them?
 
 ```mermaid
 flowchart LR
-  F[Firmware
-BIOS/UEFI] --> B[Bootloader]
+  F["Firmware<br/>BIOS/UEFI"] --> B[Bootloader]
   B --> K[Kernel init]
   K --> I[Init / Service manager]
   I --> U[User space + login]

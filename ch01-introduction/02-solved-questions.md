@@ -162,9 +162,7 @@ kernel_syscall_handler():
 
 ```mermaid
 flowchart LR
-  U[User Program
-(User Mode)] -- syscall/trap --> K[Kernel
-(Kernel Mode)]
+  U["User Program<br/>(User Mode)"] -- syscall/trap --> K["Kernel<br/>(Kernel Mode)"]
   K -- return --> U
   D[Device / Timer] -- interrupt --> K
 ```

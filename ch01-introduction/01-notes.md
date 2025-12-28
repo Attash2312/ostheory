@@ -55,12 +55,9 @@ A basic computer system:
 
 ```mermaid
 flowchart TB
-  A[User Programs
-(browsers, editors, apps)] --> B[System Programs
-(compilers, shells)]
+  A["User Programs<br/>(browsers, editors, apps)"] --> B["System Programs<br/>(compilers, shells)"]
   B --> C[Operating System / Kernel]
-  C --> D[Hardware
-CPU • Memory • Devices]
+  C --> D["Hardware<br/>CPU • Memory • Devices"]
 ```
 
 ---
@@ -84,8 +81,8 @@ CPU • Memory • Devices]
 sequenceDiagram
   participant Dev as Device
   participant CPU as CPU
-  participant OS as Kernel (ISR)
-  participant P as Interrupted Program
+  participant OS as "Kernel (ISR)"
+  participant P as "Interrupted Program"
 
   P->>CPU: executing
   Dev-->>CPU: interrupt signal
@@ -139,12 +136,10 @@ Fast memory is expensive, slow memory is cheap, so systems use a hierarchy.
 
 ```mermaid
 flowchart TB
-  R[Registers
-fastest, smallest] --> C[CPU Cache (L1/L2/L3)]
+  R["Registers<br/>fastest, smallest"] --> C[CPU Cache (L1/L2/L3)]
   C --> M[Main Memory (RAM)]
   M --> S[Secondary Storage (SSD/HDD)]
-  S --> A[Archive (tape/cloud)
-slowest, largest]
+  S --> A["Archive (tape/cloud)<br/>slowest, largest"]
 ```
 
 ### 5.2 Caching + locality

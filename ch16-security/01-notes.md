@@ -51,8 +51,7 @@ Common models:
 flowchart TD
   U[User] --> R[Role]
   R --> P[Permissions]
-  P --> O[Objects
-(files, devices, IPC)]
+  P --> O["Objects<br/>(files, devices, IPC)"]
 ```
 
 ---

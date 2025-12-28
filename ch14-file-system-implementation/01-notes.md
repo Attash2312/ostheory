@@ -14,15 +14,10 @@ A practical file system is implemented in **layers** to separate concerns:
 
 ```mermaid
 flowchart TD
-  A[User-level API: open/read/write] --> B[Logical file system
-(metadata, directories,
-protection)]
-  B --> C[File-organization module
-allocation, free-space mgmt]
-  C --> D[Basic file system
-block I/O, buffer cache]
-  D --> E[I/O control
-drivers, interrupts, DMA]
+  A[User-level API: open/read/write] --> B["Logical file system<br/>(metadata, directories,<br/>protection)"]
+  B --> C["File-organization module<br/>allocation, free-space mgmt"]
+  C --> D["Basic file system<br/>block I/O, buffer cache"]
+  D --> E["I/O control<br/>drivers, interrupts, DMA"]
   E --> F[(Storage device)]
 ```
 
@@ -49,12 +44,9 @@ To speed operations, OS maintains:
 
 ```mermaid
 flowchart LR
-  P[Process fd table] --> OF[Per-process Open File Entry
-(fd -> OFT entry)]
-  OF --> S[System-wide Open File Table
-file offset, mode, refcount]
-  S --> I[In-memory inode/FCB cache
-metadata + pointers]
+  P[Process fd table] --> OF["Per-process Open File Entry<br/>(fd -> OFT entry)"]
+  OF --> S["System-wide Open File Table<br/>file offset, mode, refcount"]
+  S --> I["In-memory inode/FCB cache<br/>metadata + pointers"]
   I --> D[(Disk blocks)]
 ```
 
