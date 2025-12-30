@@ -4,6 +4,14 @@ Every question here includes a complete answer. Use these as **write-up models**
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- How to score marks fast: write the definition in 1 line, then 3-5 crisp bullets, then a tiny example if possible.
+- In one line: OS services are the "help desk" features apps use (execute, I-O, files, communication, protection).
+- Mnemonic: E-F-I-C-A-P-E = Execute, Files, I/O, Communication, Allocation, Protection, Error detection.
+- Common mistakes: skipping the rule-set/assumptions, mixing symbols, and not showing steps in numericals.
+- If a numerical exists: write Given -> Table/Diagram -> Steps -> Final Answer (boxed).
+
 ## A) Very Short (1–2 marks) — Solved
 
 ### Q1) What is an OS service?

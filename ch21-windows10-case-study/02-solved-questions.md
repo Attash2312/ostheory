@@ -4,6 +4,14 @@ All questions include complete answers.
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- How to score marks fast: write the definition in 1 line, then 3-5 crisp bullets, then a tiny example if possible.
+- In one line: Windows case study shows how a commercial OS organizes kernel components and services.
+- Mnemonic: Hybrid kernel = mix of monolithic speed + microkernel ideas.
+- Common mistakes: skipping the rule-set/assumptions, mixing symbols, and not showing steps in numericals.
+- If a numerical exists: write Given -> Table/Diagram -> Steps -> Final Answer (boxed).
+
 ## A) Architecture — Solved
 
 ### Q1) Describe Windows 10 architecture at a high level.

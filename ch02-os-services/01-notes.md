@@ -4,6 +4,13 @@ These notes are **original** (not copied). Written for **theory exams**: definit
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- In one line: OS services are the "help desk" features apps use (execute, I-O, files, communication, protection).
+- Mnemonic: E-F-I-C-A-P-E = Execute, Files, I/O, Communication, Allocation, Protection, Error detection.
+- Common confusion: API (library call) is not always a system call; API may call multiple syscalls.
+- Exam keywords: system calls, user-kernel boundary, OS interfaces (CLI/GUI), system programs.
+
 ## 0) What’s high-yield in this chapter
 
 **Very high yield:**

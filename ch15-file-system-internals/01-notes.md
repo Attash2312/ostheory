@@ -4,6 +4,13 @@
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- In one line: Internals cover reliability and performance tricks used inside file systems.
+- Mnemonic: Journaling = write the plan first, then do the work (helps crash recovery).
+- Common confusion: inode stores metadata + pointers; directory maps name -> inode.
+- Exam keywords: journaling, caching/buffering, recovery, consistency.
+
 ## 1) What “internals” means
 File systems must handle:
 - **Performance**: caching, buffering, read-ahead, write-behind

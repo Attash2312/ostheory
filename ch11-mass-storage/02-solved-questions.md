@@ -4,6 +4,14 @@ All questions include complete answers/solutions.
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- How to score marks fast: write the definition in 1 line, then 3-5 crisp bullets, then a tiny example if possible.
+- In one line: Mass storage is about disks/SSDs, scheduling requests, and reliability.
+- Mnemonic: SCAN = elevator goes to end; LOOK = elevator stops at last request; C-SCAN = one direction then wrap.
+- Common mistakes: skipping the rule-set/assumptions, mixing symbols, and not showing steps in numericals.
+- If a numerical exists: write Given -> Table/Diagram -> Steps -> Final Answer (boxed).
+
 ## A) Short Theory — Solved
 
 ### Q1) What are seek time and rotational latency?

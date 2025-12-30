@@ -4,6 +4,13 @@
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- In one line: File system implementation is how files are stored and found on disk.
+- Mnemonic: Allocation = C-L-I = Contiguous, Linked, Indexed.
+- Common confusion: contiguous is fast but fragments; indexed avoids external fragmentation.
+- Exam keywords: free-space management, FAT, inode-style indexing.
+
 ## 1) File-system structure (layers)
 
 A practical file system is implemented in **layers** to separate concerns:

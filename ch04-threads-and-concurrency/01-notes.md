@@ -4,6 +4,13 @@ Original, exam-focused notes (not copied). High-yield because exams love definit
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- In one line: Threads are multiple workers inside one process sharing the same address space.
+- Mnemonic: Concurrency != Parallelism (C = dealing with many; P = doing many at the same time).
+- Common confusion: data sharing is easy with threads but needs synchronization.
+- Exam keywords: user vs kernel threads, multithreading models, thread libraries, race conditions.
+
 ## 0) What to prioritize
 
 **Very high yield:**

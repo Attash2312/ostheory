@@ -4,6 +4,14 @@ Everything here is fully solved with an exam-friendly method.
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- How to score marks fast: write the definition in 1 line, then 3-5 crisp bullets, then a tiny example if possible.
+- In one line: Scheduling decides who gets the CPU next to balance speed, fairness, and response.
+- Mnemonic: Formulas = TAT=CT-AT; WT=TAT-BT; RT=FirstRun-AT.
+- Common mistakes: skipping the rule-set/assumptions, mixing symbols, and not showing steps in numericals.
+- If a numerical exists: write Given -> Table/Diagram -> Steps -> Final Answer (boxed).
+
 ## A) Short Theory — Solved
 
 ### Q1) Differentiate preemptive and non-preemptive scheduling.

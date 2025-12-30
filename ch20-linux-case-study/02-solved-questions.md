@@ -4,6 +4,14 @@ All questions include complete answers.
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- How to score marks fast: write the definition in 1 line, then 3-5 crisp bullets, then a tiny example if possible.
+- In one line: Linux case study connects OS concepts to a real OS (processes, scheduling, memory, FS).
+- Mnemonic: "Everything is a file" (common Linux mindset for devices and I/O).
+- Common mistakes: skipping the rule-set/assumptions, mixing symbols, and not showing steps in numericals.
+- If a numerical exists: write Given -> Table/Diagram -> Steps -> Final Answer (boxed).
+
 ## A) Architecture — Solved
 
 ### Q1) Explain Linux architecture in 4–6 lines.

@@ -4,6 +4,14 @@ All questions are fully solved, including complete algorithms and step-by-step p
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- How to score marks fast: write the definition in 1 line, then 3-5 crisp bullets, then a tiny example if possible.
+- In one line: Virtual memory lets processes act like they have more RAM using paging + disk.
+- Mnemonic: TLB = fast cache of page table entries (hit saves one memory access).
+- Common mistakes: skipping the rule-set/assumptions, mixing symbols, and not showing steps in numericals.
+- If a numerical exists: write Given -> Table/Diagram -> Steps -> Final Answer (boxed).
+
 ## A) Short Theory — Solved
 
 ### Q1) Define demand paging.

@@ -4,6 +4,13 @@ Original, exam-focused notes. This chapter is usually tested via **classic probl
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- In one line: Classic sync problems teach correct semaphore ordering (Producer-Consumer, Readers-Writers, Dining Philosophers).
+- Mnemonic (Producer): wait(empty)->wait(mutex)->insert->signal(mutex)->signal(full).
+- Mnemonic (Consumer): wait(full)->wait(mutex)->remove->signal(mutex)->signal(empty).
+- Exam keywords: bounded buffer, read_count, starvation, deadlock avoidance in philosophers.
+
 ## 0) What to prioritize
 
 **Very high yield:**

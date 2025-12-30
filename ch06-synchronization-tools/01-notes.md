@@ -4,6 +4,13 @@ Original, exam-focused notes (not copied). This is **extremely high yield** for 
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- In one line: Synchronization prevents two threads from messing up shared data at the same time.
+- Mnemonic: Mutex = 1 key (only one inside); Counting semaphore = k keys (k identical resources).
+- Common confusion: "race condition" is the bug; "critical section" is the code region to protect.
+- Exam keywords: atomicity, busy waiting, spinlock, semaphore, monitor, condition variables.
+
 ## 0) What to prioritize
 
 **Very high yield:**

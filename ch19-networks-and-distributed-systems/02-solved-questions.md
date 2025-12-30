@@ -4,6 +4,14 @@ All questions include complete answers.
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- How to score marks fast: write the definition in 1 line, then 3-5 crisp bullets, then a tiny example if possible.
+- In one line: Distributed systems share resources over a network; failures and delays matter.
+- Mnemonic: CAP (high-level idea): Consistency, Availability, Partition tolerance (tradeoffs).
+- Common mistakes: skipping the rule-set/assumptions, mixing symbols, and not showing steps in numericals.
+- If a numerical exists: write Given -> Table/Diagram -> Steps -> Final Answer (boxed).
+
 ## A) Core Theory — Solved
 
 ### Q1) Differentiate latency and bandwidth.

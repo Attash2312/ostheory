@@ -4,6 +4,13 @@ Original, exam-focused notes (not copied). High-yield because exams often includ
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- In one line: Mass storage is about disks/SSDs, scheduling requests, and reliability.
+- Mnemonic: SCAN = elevator goes to end; LOOK = elevator stops at last request; C-SCAN = one direction then wrap.
+- Common confusion: total head movement = sum of absolute differences along the path.
+- Exam keywords: disk scheduling, RAID idea, latency/throughput.
+
 ## 0) What to prioritize
 
 **Very high yield:**

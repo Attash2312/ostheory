@@ -4,6 +4,13 @@ Original, exam-focused notes (not copied). This chapter is **very high-yield** f
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- In one line: Virtual memory lets processes act like they have more RAM using paging + disk.
+- Mnemonic: TLB = fast cache of page table entries (hit saves one memory access).
+- Page replacement intuition: FIFO(oldest), LRU(least recently used), OPT(farthest future use).
+- Exam keywords: demand paging, page fault steps, thrashing, working set, EAT.
+
 ## 0) What to prioritize
 
 **Very high yield:**

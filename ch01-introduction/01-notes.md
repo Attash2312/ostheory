@@ -9,6 +9,13 @@ If a section is typically low-yield, it is kept short.
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- In one line: OS is the BOSS that manages hardware and lets apps run safely.
+- Mnemonic: BOSS = Bridge (apps-hardware), Organize (CPU/mem/I-O), Secure (protection), Serve (system calls).
+- Quick diff: Interrupt = external event; Trap/Exception = CPU event due to an instruction; System call = intentional trap to ask OS.
+- Exam keywords: resource allocator, control program, user mode vs kernel mode, timer, DMA, caching/locality.
+
 ## 0) What to prioritize (exam map)
 
 **Very high yield (write in detail):**

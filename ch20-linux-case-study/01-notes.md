@@ -4,6 +4,13 @@
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- In one line: Linux case study connects OS concepts to a real OS (processes, scheduling, memory, FS).
+- Mnemonic: "Everything is a file" (common Linux mindset for devices and I/O).
+- Exam focus: map theory terms (syscall, process, scheduler, VM) to Linux examples.
+- Exam keywords: system calls, /proc, permissions, scheduling classes.
+
 ## 1) Big picture architecture
 Linux is a **monolithic kernel** with loadable modules.
 

@@ -4,6 +4,14 @@ All questions include complete answers/solutions.
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- How to score marks fast: write the definition in 1 line, then 3-5 crisp bullets, then a tiny example if possible.
+- In one line: I/O systems connect slow devices to CPU using interrupts, DMA, buffering, and drivers.
+- Mnemonic: B-C-S = Buffering, Caching, Spooling (3 ways to smooth I/O).
+- Common mistakes: skipping the rule-set/assumptions, mixing symbols, and not showing steps in numericals.
+- If a numerical exists: write Given -> Table/Diagram -> Steps -> Final Answer (boxed).
+
 ## A) Short Theory — Solved
 
 ### Q1) Differentiate polling and interrupt-driven I/O.

@@ -4,6 +4,13 @@
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- In one line: Distributed systems share resources over a network; failures and delays matter.
+- Mnemonic: CAP (high-level idea): Consistency, Availability, Partition tolerance (tradeoffs).
+- Layman: messages can be late/lost, so systems must handle it safely.
+- Exam keywords: client-server, RPC, distributed file systems, fault tolerance.
+
 ## 1) Why OS cares about networking
 - Network is an I/O device + communication channel
 - OS provides: sockets, protocol stacks, buffering, concurrency, security

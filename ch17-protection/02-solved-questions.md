@@ -4,6 +4,14 @@ All questions include complete answers (theory + algorithms/pseudocode).
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- How to score marks fast: write the definition in 1 line, then 3-5 crisp bullets, then a tiny example if possible.
+- In one line: Protection controls what a process/user is allowed to do inside a system.
+- Mnemonic: ACM = Access Control Matrix (Subject x Object -> Rights).
+- Common mistakes: skipping the rule-set/assumptions, mixing symbols, and not showing steps in numericals.
+- If a numerical exists: write Given -> Table/Diagram -> Steps -> Final Answer (boxed).
+
 ## A) Core Theory — Solved
 
 ### Q1) What is a protection domain?

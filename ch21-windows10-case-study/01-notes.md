@@ -4,6 +4,13 @@
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- In one line: Windows case study shows how a commercial OS organizes kernel components and services.
+- Mnemonic: Hybrid kernel = mix of monolithic speed + microkernel ideas.
+- Exam focus: relate theory (threads, scheduling, VM, security) to Windows components.
+- Exam keywords: kernel mode vs user mode, services, objects, security model.
+
 ## 1) Architecture overview
 Windows follows a **hybrid kernel** approach (mix of monolithic performance and modular layering).
 

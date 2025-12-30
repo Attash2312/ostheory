@@ -4,6 +4,13 @@ Original, exam-focused notes. This chapter is **the biggest numerical + algorith
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- In one line: Scheduling decides who gets the CPU next to balance speed, fairness, and response.
+- Mnemonic: Formulas = TAT=CT-AT; WT=TAT-BT; RT=FirstRun-AT.
+- Mnemonic: SJF is best average WT but needs burst estimate; RR improves response.
+- Exam keywords: preemptive/non-preemptive, Gantt chart, starvation/aging, dispatch latency.
+
 ## 0) What to prioritize
 
 **Very high yield:**

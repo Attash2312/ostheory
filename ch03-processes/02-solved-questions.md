@@ -4,6 +4,14 @@ All questions include complete answers/solutions.
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- How to score marks fast: write the definition in 1 line, then 3-5 crisp bullets, then a tiny example if possible.
+- In one line: A process is a running program + its resources; OS tracks it using a PCB.
+- Mnemonic: PCB = P-S-P-R-M-F = PID, State, Program counter, Registers, Memory info, Files.
+- Common mistakes: skipping the rule-set/assumptions, mixing symbols, and not showing steps in numericals.
+- If a numerical exists: write Given -> Table/Diagram -> Steps -> Final Answer (boxed).
+
 ## A) Very Short (1–2 marks) — Solved
 
 ### Q1) Define process.

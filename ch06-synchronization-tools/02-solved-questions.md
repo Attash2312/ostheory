@@ -4,6 +4,14 @@ All questions are fully solved. Includes complete algorithms and correct semapho
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- How to score marks fast: write the definition in 1 line, then 3-5 crisp bullets, then a tiny example if possible.
+- In one line: Synchronization prevents two threads from messing up shared data at the same time.
+- Mnemonic: Mutex = 1 key (only one inside); Counting semaphore = k keys (k identical resources).
+- Common mistakes: skipping the rule-set/assumptions, mixing symbols, and not showing steps in numericals.
+- If a numerical exists: write Given -> Table/Diagram -> Steps -> Final Answer (boxed).
+
 ## A) Core Definitions — Solved
 
 ### Q1) What is a race condition?

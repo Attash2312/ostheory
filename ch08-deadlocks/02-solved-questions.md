@@ -4,6 +4,14 @@ All questions are fully solved, including complete Banker’s algorithm steps.
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- How to score marks fast: write the definition in 1 line, then 3-5 crisp bullets, then a tiny example if possible.
+- In one line: Deadlock is a permanent waiting cycle; avoidance checks if the system can still finish safely.
+- Mnemonic: Coffman conditions = M-H-N-C = Mutual exclusion, Hold&wait, No preemption, Circular wait.
+- Common mistakes: skipping the rule-set/assumptions, mixing symbols, and not showing steps in numericals.
+- If a numerical exists: write Given -> Table/Diagram -> Steps -> Final Answer (boxed).
+
 ## A) Core Theory — Solved
 
 ### Q1) Define deadlock.

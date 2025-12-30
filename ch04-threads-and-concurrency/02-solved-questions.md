@@ -4,6 +4,14 @@ All questions include complete answers.
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- How to score marks fast: write the definition in 1 line, then 3-5 crisp bullets, then a tiny example if possible.
+- In one line: Threads are multiple workers inside one process sharing the same address space.
+- Mnemonic: Concurrency != Parallelism (C = dealing with many; P = doing many at the same time).
+- Common mistakes: skipping the rule-set/assumptions, mixing symbols, and not showing steps in numericals.
+- If a numerical exists: write Given -> Table/Diagram -> Steps -> Final Answer (boxed).
+
 ## A) Very Short (1–2 marks) — Solved
 
 ### Q1) Define thread.

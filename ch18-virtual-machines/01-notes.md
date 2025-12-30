@@ -4,6 +4,13 @@
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- In one line: Virtual machines run an OS inside an OS using a hypervisor/VMM.
+- Mnemonic: Type-1 = bare metal; Type-2 = hosted (runs on top of an OS).
+- Layman: it is like a "computer inside your computer".
+- Exam keywords: virtualization, isolation, emulation vs virtualization.
+
 ## 1) What is virtualization?
 Virtualization provides an abstraction of hardware so multiple **isolated** environments can run on the same physical machine.
 

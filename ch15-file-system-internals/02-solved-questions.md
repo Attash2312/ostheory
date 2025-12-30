@@ -4,6 +4,14 @@ All questions include complete answers.
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- How to score marks fast: write the definition in 1 line, then 3-5 crisp bullets, then a tiny example if possible.
+- In one line: Internals cover reliability and performance tricks used inside file systems.
+- Mnemonic: Journaling = write the plan first, then do the work (helps crash recovery).
+- Common mistakes: skipping the rule-set/assumptions, mixing symbols, and not showing steps in numericals.
+- If a numerical exists: write Given -> Table/Diagram -> Steps -> Final Answer (boxed).
+
 ## A) Caching/Buffering — Solved
 
 ### Q1) Explain buffer cache, page cache, and why a unified cache is useful.

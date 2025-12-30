@@ -4,6 +4,14 @@ All questions include complete answers.
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- How to score marks fast: write the definition in 1 line, then 3-5 crisp bullets, then a tiny example if possible.
+- In one line: Virtual machines run an OS inside an OS using a hypervisor/VMM.
+- Mnemonic: Type-1 = bare metal; Type-2 = hosted (runs on top of an OS).
+- Common mistakes: skipping the rule-set/assumptions, mixing symbols, and not showing steps in numericals.
+- If a numerical exists: write Given -> Table/Diagram -> Steps -> Final Answer (boxed).
+
 ## A) Core Theory — Solved
 
 ### Q1) Define virtualization and list 4 benefits.

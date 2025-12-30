@@ -4,6 +4,14 @@ All questions include complete answers/solutions, including numericals and “al
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- How to score marks fast: write the definition in 1 line, then 3-5 crisp bullets, then a tiny example if possible.
+- In one line: Main memory management decides where processes live in RAM and how addresses translate.
+- Mnemonic: External fragmentation = variable-size chunks (segmentation/contiguous); Internal = fixed-size chunks (paging).
+- Common mistakes: skipping the rule-set/assumptions, mixing symbols, and not showing steps in numericals.
+- If a numerical exists: write Given -> Table/Diagram -> Steps -> Final Answer (boxed).
+
 ## A) Short Theory — Solved
 
 ### Q1) Differentiate logical and physical address.

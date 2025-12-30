@@ -4,6 +4,13 @@ Original, exam-focused notes (not copied). High-yield for theory questions (defi
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- In one line: File system interface is what users/programs see: files, directories, and operations.
+- Mnemonic: CRUD+O = Create, Read, Update/Write, Delete, Open/Close.
+- Common confusion: file descriptor/handle is an OS reference, not the file name.
+- Exam keywords: directory structure, access methods, protection bits, mounting.
+
 ## 0) What to prioritize
 
 **Very high yield:**

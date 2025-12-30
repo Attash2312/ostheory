@@ -4,6 +4,13 @@
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- In one line: Protection controls what a process/user is allowed to do inside a system.
+- Mnemonic: ACM = Access Control Matrix (Subject x Object -> Rights).
+- Common confusion: Security is defending from outside threats; Protection is controlling inside access.
+- Exam keywords: domains, access rights, ACL vs capabilities.
+
 ## 1) Protection vs security
 - **Protection**: internal control of access to resources (files, memory, devices, CPU) by processes/users.
 - **Security**: broader — includes protection plus external threats (malware, network attacks, etc.).

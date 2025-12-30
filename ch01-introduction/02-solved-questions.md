@@ -4,6 +4,14 @@ All questions below include **complete answers/solutions** (no unsolved section)
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- How to score marks fast: write the definition in 1 line, then 3-5 crisp bullets, then a tiny example if possible.
+- In one line: OS is the BOSS that manages hardware and lets apps run safely.
+- Mnemonic: BOSS = Bridge (apps-hardware), Organize (CPU/mem/I-O), Secure (protection), Serve (system calls).
+- Common mistakes: skipping the rule-set/assumptions, mixing symbols, and not showing steps in numericals.
+- If a numerical exists: write Given -> Table/Diagram -> Steps -> Final Answer (boxed).
+
 ## A) Very Short (1–2 marks) — Solved
 
 ### Q1) What is the kernel?

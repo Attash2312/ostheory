@@ -4,6 +4,14 @@ Everything is complete: correct semaphore/monitor solutions and explanations.
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- How to score marks fast: write the definition in 1 line, then 3-5 crisp bullets, then a tiny example if possible.
+- In one line: Classic sync problems teach correct semaphore ordering (Producer-Consumer, Readers-Writers, Dining Philosophers).
+- Mnemonic (Producer): wait(empty)->wait(mutex)->insert->signal(mutex)->signal(full).
+- Common mistakes: skipping the rule-set/assumptions, mixing symbols, and not showing steps in numericals.
+- If a numerical exists: write Given -> Table/Diagram -> Steps -> Final Answer (boxed).
+
 ## A) Producer–Consumer (Bounded Buffer) — Fully Solved
 
 ### Q1) Give a complete semaphore solution for bounded buffer of size N.

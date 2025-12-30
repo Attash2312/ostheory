@@ -4,6 +4,13 @@ Original, exam-focused notes (not copied). Deadlocks are **very high yield** for
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- In one line: Deadlock is a permanent waiting cycle; avoidance checks if the system can still finish safely.
+- Mnemonic: Coffman conditions = M-H-N-C = Mutual exclusion, Hold&wait, No preemption, Circular wait.
+- RAG memory: Request edge P->R, Assignment edge R->P.
+- Exam keywords: prevention vs avoidance (Banker), detection/recovery, safe sequence.
+
 ## 0) What to prioritize
 
 **Very high yield:**

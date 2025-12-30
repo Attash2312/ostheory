@@ -4,6 +4,13 @@
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- In one line: Security is protecting systems from attacks and ensuring trust.
+- Mnemonic: CIA = Confidentiality, Integrity, Availability.
+- Layman: confidentiality = keep secret; integrity = keep correct; availability = keep working.
+- Exam keywords: authentication vs authorization, encryption, malware basics.
+
 ## 1) Goals and terminology
 
 ### CIA triad

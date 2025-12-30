@@ -4,6 +4,13 @@ Original, exam-focused notes (not copied). High-yield because exams ask **interr
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- In one line: I/O systems connect slow devices to CPU using interrupts, DMA, buffering, and drivers.
+- Mnemonic: B-C-S = Buffering, Caching, Spooling (3 ways to smooth I/O).
+- Common confusion: Interrupt-driven I/O frees CPU vs polling wastes CPU cycles.
+- Exam keywords: DMA, interrupt handling, device controller, kernel I/O subsystem.
+
 ## 0) What to prioritize
 
 **Very high yield:**

@@ -4,6 +4,13 @@ Original, exam-focused notes (not copied). This chapter is **very high-yield**.
 
 ---
 
+## Beginner shortcuts (layman + mnemonics)
+
+- In one line: A process is a running program + its resources; OS tracks it using a PCB.
+- Mnemonic: PCB = P-S-P-R-M-F = PID, State, Program counter, Registers, Memory info, Files.
+- Common confusion: Program (file on disk) vs Process (running) vs Thread (execution path inside process).
+- Exam keywords: states, context switch, scheduler, IPC, fork/exec, zombie/orphan.
+
 ## 0) What to prioritize
 
 **Very high yield:**
