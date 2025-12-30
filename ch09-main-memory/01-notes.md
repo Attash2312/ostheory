@@ -28,7 +28,7 @@ Original, exam-focused notes (not copied). This chapter is **high-yield** for bo
 
 ```mermaid
 flowchart LR
-  CPU["CPU generates<br/>logical address"] --> MMU[MMU mapping]
+  CPU[CPU generates<br/>logical address] --> MMU[MMU mapping]
   MMU --> RAM[Physical memory]
 ```
 
@@ -96,8 +96,8 @@ Address format:
 
 ```mermaid
 flowchart LR
-  LA["Logical address<br/>p | d"] --> PT[Page Table]
-  PT -->|p → f| PA["Physical address<br/>f | d"]
+  LA[Logical address<br/>p | d] --> PT[Page Table]
+  PT -->|p → f| PA[Physical address<br/>f | d]
 ```
 
 ### Internal fragmentation in paging

@@ -9,8 +9,8 @@ Linux is a **monolithic kernel** with loadable modules.
 
 ```mermaid
 flowchart TD
-  U["User Space<br/>(apps, shells, daemons)"] --> S[System Call Interface]
-  S --> K["Linux Kernel<br/>(process, memory, VFS,<br/>networking, drivers)"]
+  U[User Space<br/>(apps, shells, daemons)] --> S[System Call Interface]
+  S --> K[Linux Kernel<br/>(process, memory, VFS,<br/>networking, drivers)]
   K --> HW[(Hardware)]
 ```
 

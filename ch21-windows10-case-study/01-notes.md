@@ -9,8 +9,8 @@ Windows follows a **hybrid kernel** approach (mix of monolithic performance and 
 
 ```mermaid
 flowchart TD
-  U["User Mode<br/>Apps + Services"] --> SUB[Subsystem DLLs / APIs]
-  SUB --> K["Kernel Mode<br/>Executive + Kernel + Drivers"]
+  U[User Mode<br/>Apps + Services] --> SUB[Subsystem DLLs / APIs]
+  SUB --> K[Kernel Mode<br/>Executive + Kernel + Drivers]
   K --> HW[(Hardware)]
 ```
 

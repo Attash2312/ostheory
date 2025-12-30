@@ -155,8 +155,8 @@ Condition variables support waiting inside monitor:
 flowchart TB
   M[Monitor]
   M --> Data[Shared data]
-  M --> Ops["Procedures<br/>(mutual exclusion)"]
-  M --> CV["Condition variables<br/>wait/signal"]
+  M --> Ops[Procedures<br/>(mutual exclusion)]
+  M --> CV[Condition variables<br/>wait/signal]
 ```
 
 ---

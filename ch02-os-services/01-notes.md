@@ -37,8 +37,8 @@ OS provides services to **users** and **programs**:
 ### Diagram: services as a layer
 ```mermaid
 flowchart TB
-  U[Users / Applications] --> S["OS Services<br/>(UI, exec, I/O, files, IPC, errors,<br/>allocation, accounting, protection)"]
-  S --> K["Kernel mechanisms<br/>(scheduling, MMU, drivers, FS)"]
+  U[Users / Applications] --> S[OS Services<br/>(UI, exec, I/O, files, IPC, errors,<br/>allocation, accounting, protection)]
+  S --> K[Kernel mechanisms<br/>(scheduling, MMU, drivers, FS)]
   K --> H[Hardware]
 ```
 
@@ -109,7 +109,7 @@ Typical categories:
 ### Diagram: where system programs sit
 ```mermaid
 flowchart TB
-  A[Applications] --> SP["System Programs<br/>(shell, compiler, utilities)"]
+  A[Applications] --> SP[System Programs<br/>(shell, compiler, utilities)]
   SP --> K[Kernel]
   K --> H[Hardware]
 ```
@@ -156,7 +156,7 @@ Why separate them?
 
 ```mermaid
 flowchart LR
-  F["Firmware<br/>BIOS/UEFI"] --> B[Bootloader]
+  F[Firmware<br/>BIOS/UEFI] --> B[Bootloader]
   B --> K[Kernel init]
   K --> I[Init / Service manager]
   I --> U[User space + login]

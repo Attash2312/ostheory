@@ -36,10 +36,10 @@ Threads in same process share:
 ### Diagram: process vs threads
 ```mermaid
 flowchart TB
-  P["Process Address Space<br/>(code + data + heap + open files)"]
-  P --> T1["Thread 1<br/>PC+regs+stack"]
-  P --> T2["Thread 2<br/>PC+regs+stack"]
-  P --> T3["Thread 3<br/>PC+regs+stack"]
+  P[Process Address Space<br/>(code + data + heap + open files)]
+  P --> T1[Thread 1<br/>PC+regs+stack]
+  P --> T2[Thread 2<br/>PC+regs+stack]
+  P --> T3[Thread 3<br/>PC+regs+stack]
 ```
 
 ### Thread vs process (classic compare)
