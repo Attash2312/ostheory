@@ -2,6 +2,9 @@
 
 This repo contains **chapter-wise, exam-focused notes** + **solved questions** (theory + numericals/derivations where applicable).
 
+Additional syllabus pack:
+- [important-topics.md](important-topics.md)
+
 ## Chapters (done)
 
 - Chapter 1: Introduction

@@ -921,3 +921,275 @@ In exams, always:
 - FIFO/LRU/OPT: know the rules + practice at least one full table
 - Disk scheduling: know paths and sum movement correctly
 - VM numerical: EAT with TLB
+
+## 16) Enhanced practice pack (extra numericals + full step-by-step algorithms)
+
+This section **adds more solved numericals and fully expanded algorithm steps** while keeping everything above unchanged.
+
+---
+
+### 16.1 Bankers Algorithm  full Request solved numerical (grant/deny)
+
+Using the same idea as Section 4, here is a complete request example you can write in exams.
+
+Assume (A, B, C) resources:
+- Available = (3, 3, 2)
+
+Allocation:
+| Process | A | B | C |
+|---|---:|---:|---:|
+| P0 | 0 | 1 | 0 |
+| P1 | 2 | 0 | 0 |
+| P2 | 3 | 0 | 2 |
+| P3 | 2 | 1 | 1 |
+| P4 | 0 | 0 | 2 |
+
+Max:
+| Process | A | B | C |
+|---|---:|---:|---:|
+| P0 | 7 | 5 | 3 |
+| P1 | 3 | 2 | 2 |
+| P2 | 9 | 0 | 2 |
+| P3 | 2 | 2 | 2 |
+| P4 | 4 | 3 | 3 |
+
+Need = Max  Allocation:
+| Process | A | B | C |
+|---|---:|---:|---:|
+| P0 | 7 | 4 | 3 |
+| P1 | 1 | 2 | 2 |
+| P2 | 6 | 0 | 0 |
+| P3 | 0 | 1 | 1 |
+| P4 | 4 | 3 | 1 |
+
+#### Case 1: Request that can be granted
+Request by P1: (1, 0, 2)
+
+Step-by-step checks:
+1) Request  Need?
+- (1,0,2)  (1,2,2) 
+
+2) Request  Available?
+- (1,0,2)  (3,3,2) 
+
+3) Pretend allocate:
+- Available' = (3,3,2)  (1,0,2) = (2,3,0)
+- Allocation(P1)' = (2,0,0) + (1,0,2) = (3,0,2)
+- Need(P1)' = (1,2,2)  (1,0,2) = (0,2,0)
+
+4) Safety check (one valid safe order):
+- Work=(2,3,0)
+- P1 needs (0,2,0)  Work becomes (5,3,2)
+- P3 needs (0,1,1)  Work becomes (7,4,3)
+- P4 needs (4,3,1)  Work becomes (7,4,5)
+- P0 needs (7,4,3)  Work becomes (7,5,5)
+- P2 needs (6,0,0)  Work becomes (10,5,7)
+
+ Safe after request  GRANT.
+
+#### Case 2: Request that must be denied (unsafe)
+Request by P4: (3, 3, 0)
+
+Checks:
+1) Request  Need(P4)? Need(P4)=(4,3,1)
+- (3,3,0)  (4,3,1) 
+
+2) Request  Available?
+- (3,3,0)  (3,3,2) 
+
+3) Pretend allocate:
+- Available' = (0,0,2)
+- Need(P4)' = (1,0,1)
+
+4) Safety check idea:
+- With Work=(0,0,2), notice every unfinished process needs at least A>0 or B>0 except none can proceed.
+- No process satisfies Need  Work.
+
+ Unsafe  DENY and rollback.
+
+**Exam writing tip:** Even if your exact unsafe check differs, the key is: after pretend allocation, if no safe sequence exists, deny.
+
+---
+
+### 16.2 Bankers algorithm  exam-ready pseudocode
+
+```text
+SafetyCheck(Available, Allocation, Need):
+  Work = Available
+  Finish[i]=false for all i
+
+  repeat:
+    found=false
+    for each i:
+      if Finish[i]==false and Need[i] <= Work:
+        Work = Work + Allocation[i]
+        Finish[i]=true
+        found=true
+    if found==false:
+      break
+
+  if all Finish[i]==true: SAFE else UNSAFE
+
+RequestResources(i, Request):
+  if Request > Need[i]: error
+  if Request > Available: wait
+
+  Available  -= Request
+  Allocation += Request
+  Need       -= Request
+
+  if SafetyCheck()==SAFE: grant
+  else rollback and deny
+```
+
+---
+
+### 16.3 RAG (Resource Allocation Graph)  cycle example (single instance)
+
+```mermaid
+flowchart LR
+  P1((P1)) --> R1[R1]
+  R1 --> P2((P2))
+  P2 --> R2[R2]
+  R2 --> P1((P1))
+```
+
+What to write:
+- If each resource has a single instance, a cycle means deadlock.
+- With multiple instances, a cycle means possible deadlock.
+
+---
+
+### 16.4 Semaphores  Dining Philosophers (full pseudocode for each process)
+
+Semaphores:
+- room = 4 (counting)
+- fork[i] = 1 for i=0..4
+
+```text
+Philosopher i:
+  while true:
+    think()
+
+    wait(room)
+    wait(fork[i])
+    wait(fork[(i+1) mod 5])
+
+    eat()
+
+    signal(fork[(i+1) mod 5])
+    signal(fork[i])
+    signal(room)
+```
+
+Why it avoids deadlock:
+- room=4 prevents all 5 from holding one fork and waiting.
+
+---
+
+### 16.5 MLFQ  step-by-step solving template + extra numerical
+
+**Template to write before solving:**
+1) Define queues and quanta (Q0, Q1, Q2).
+2) State: pick highest non-empty queue.
+3) State demotion rule (full quantum used  lower queue).
+4) State boost period if given.
+
+**Extra numerical (with boost):**
+- Q0 q=2, Q1 q=4, Q2 FCFS
+- boost every 8 time units
+- processes: P1(AT=0,BT=9), P2(AT=1,BT=4), P3(AT=2,BT=5)
+
+(You can verify your schedule by ensuring total CPU time = 9+4+5 = 18 and everyone finishes.)
+
+---
+
+### 16.6 Paging & Segmentation  quick numericals (address translation)
+
+**Paging:** page size 1KB, logical address 2050
+- p = floor(2050/1024)=2
+- d = 2050 mod 1024 = 2
+If page 2 maps to frame 7:
+- physical = 7*1024 + 2 = 7170
+
+**Segmentation:** segment table: (base,limit)
+- S0: (1000, 400)
+Address (0,350): valid since 350<400
+- physical = 1000+350=1350
+
+---
+
+### 16.7 Page table memory overhead numerical
+
+Assume:
+- 32-bit virtual space, page size 4KB, PTE=4 bytes
+
+Pages = 2^32 / 2^12 = 2^20
+Page table size = 2^20 * 4 bytes = 4 MB per process
+
+---
+
+### 16.8 Page replacement — full LRU and OPT tables (3 frames)
+
+Reference string:
+- 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2
+
+**LRU (faults = 9):**
+| Ref | Frames | Fault | Evicted |
+|---:|---|:---:|---|
+| 7 | 7 _ _ | Y | - |
+| 0 | 7 0 _ | Y | - |
+| 1 | 7 0 1 | Y | - |
+| 2 | 2 0 1 | Y | 7 |
+| 0 | 2 0 1 | N | - |
+| 3 | 2 0 3 | Y | 1 |
+| 0 | 2 0 3 | N | - |
+| 4 | 4 0 3 | Y | 2 |
+| 2 | 4 0 2 | Y | 3 |
+| 3 | 4 3 2 | Y | 0 |
+| 0 | 0 3 2 | Y | 4 |
+| 3 | 0 3 2 | N | - |
+| 2 | 0 3 2 | N | - |
+
+**OPT (faults = 7):**
+| Ref | Frames | Fault | Evicted (idea) |
+|---:|---|:---:|---|
+| 7 | 7 _ _ | Y | - |
+| 0 | 7 0 _ | Y | - |
+| 1 | 7 0 1 | Y | - |
+| 2 | 2 0 1 | Y | 7 |
+| 0 | 2 0 1 | N | - |
+| 3 | 2 0 3 | Y | 1 (never used again) |
+| 0 | 2 0 3 | N | - |
+| 4 | 2 4 3 | Y | 0 (used farthest) |
+| 2 | 2 4 3 | N | - |
+| 3 | 2 4 3 | N | - |
+| 0 | 2 0 3 | Y | 4 (never used again) |
+| 3 | 2 0 3 | N | - |
+| 2 | 2 0 3 | N | - |
+
+---
+
+### 16.9 Disk scheduling  opposite direction practice
+
+Using requests 98,183,37,122,14,124,65,67 and head=53:
+
+LOOK toward high end first:
+- path: 53  65  67  98  122  124  183  37  14
+- movement = 299
+
+---
+
+### 16.10 Virtual Memory  EAT including page-fault penalty
+
+Assume:
+- normal memory access = 100 ns
+- page fault service = 8 ms = 8,000,000 ns
+- page fault rate p = 0.0005
+
+EAT = (1-p)*100 + p*8,000,000
+= 0.9995*100 + 0.0005*8,000,000
+= 99.95 + 4,000
+= 4,099.95 ns  4,100 ns
+
+Key exam lesson: even tiny p causes huge EAT increase.
