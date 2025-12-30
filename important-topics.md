@@ -1,4 +1,4 @@
-# Important Topics (OS Theory) — 100 Marks Syllabus Pack
+# Important Topics (OS Theory) - 100 Marks Syllabus Pack
 
 This file is a **beginner-friendly, exam-focused** guide to the exact topics your teacher listed.
 
@@ -6,6 +6,17 @@ How to study this file:
 - Read the **concept** section first.
 - Then memorize the **exam points**.
 - Then practice the **solved numericals** (repeat until you can reproduce the steps).
+
+Quick navigation (use Ctrl+F):
+- 4) Banker's Algorithm + RAG
+- 5) Semaphores (pseudocode)
+- 6) MLFQ scheduling
+- 7) Paging vs Segmentation
+- 10) First/Best/Worst fit
+- 11) FIFO/LRU/OPT
+- 12) Disk scheduling
+- 13) Virtual memory (EAT)
+- 16) Enhanced practice pack (extra solved numericals)
 
 ---
 
@@ -19,7 +30,7 @@ How to study this file:
 - (And the minimum extra basics needed to understand them)
 
 ### Numericals / algorithms
-1. Deadlock avoidance (Banker’s Algorithm) + Resource Allocation Graph (RAG)
+1. Deadlock avoidance (Banker's Algorithm) + Resource Allocation Graph (RAG)
 2. Semaphores: write pseudocode for each process
 3. CPU Scheduling: Multi-Level Feedback Queue (MLFQ) only
 
@@ -31,7 +42,7 @@ How to study this file:
 ### Long numericals
 1. First Fit, Best Fit, Worst Fit (contiguous memory allocation)
 2. Paging replacement: FIFO, LRU, OPT (OPR)
-3. Disk scheduling: FCFS, SCAN, C‑SCAN, LOOK
+3. Disk scheduling: FCFS, SCAN, C-SCAN, LOOK
 4. One numerical from Virtual Memory
 
 ---
@@ -181,9 +192,9 @@ flowchart TB
 
 ---
 
-## 4) Deadlock avoidance: Banker’s Algorithm + Resource Allocation Graph (Numerical)
+## 4) Deadlock avoidance: Banker's Algorithm + Resource Allocation Graph (Numerical)
 
-### 4.1 Deadlock basics (needed for Banker’s)
+### 4.1 Deadlock basics (needed for Banker's)
 **Deadlock:** a set of processes are stuck forever because each is waiting for resources held by another.
 
 Four necessary conditions (memorize):
@@ -192,8 +203,8 @@ Four necessary conditions (memorize):
 3. No preemption
 4. Circular wait
 
-### 4.2 Banker’s Algorithm (what it answers)
-Banker’s checks: **If we grant this request now, will the system remain in a safe state?**
+### 4.2 Banker's Algorithm (what it answers)
+Banker's checks: **If we grant this request now, will the system remain in a safe state?**
 
 - **Safe state**: there exists a sequence of process completion (safe sequence) such that each process can finish with currently available + released resources.
 
@@ -205,7 +216,7 @@ Tables:
 - **Available[m]**: currently available instances of each resource type
 - **Max[n][m]**: maximum demand of each process
 - **Allocation[n][m]**: currently allocated
-- **Need[n][m] = Max − Allocation**
+- **Need[n][m] = Max - Allocation**
 
 ### 4.4 Safety algorithm (step-by-step)
 1. Set `Work = Available`
@@ -218,7 +229,7 @@ Tables:
 5. Repeat until no more can be found
 6. If all `Finish[i] = true` then system is safe
 
-### 4.5 Solved numerical (Banker’s)
+### 4.5 Solved numerical (Banker's)
 
 **Given (3 resource types A, B, C and 5 processes P0..P4):**
 
@@ -243,7 +254,7 @@ Max:
 | P3 | 2 | 2 | 2 |
 | P4 | 4 | 3 | 3 |
 
-**Step 1: compute Need = Max − Allocation**
+**Step 1: compute Need = Max - Allocation**
 | Process | Need A | Need B | Need C |
 |---|---:|---:|---:|
 | P0 | 7 | 4 | 3 |
@@ -280,8 +291,8 @@ Next:
   - Work = (7,5,5) + Allocation(P2)(3,0,2) = (10,5,7)
   - Sequence: P1, P3, P4, P0, P2
 
-✅ **Safe state**. One safe sequence is:
-- **P1 → P3 → P4 → P0 → P2**
+Result: **Safe state**. One safe sequence is:
+- **P1 -> P3 -> P4 -> P0 -> P2**
 
 ### 4.6 Resource Allocation Graph (RAG)
 RAG is a graph to visualize allocation/request.
@@ -302,7 +313,7 @@ flowchart LR
 - If each resource type has **only one instance**, a cycle implies deadlock.
 - With **multiple instances**, cycle is necessary but not sufficient.
 
-### 4.7 “Banker’s with request” mini-template
+### 4.7 "Banker's with request" mini-template
 If a process Pi requests `Request[i]`:
 1. Check `Request[i] <= Need[i]` (else error)
 2. Check `Request[i] <= Available` (else wait)
@@ -360,7 +371,7 @@ signal(mutex)
   // remainder section
 ```
 
-### 5.6 Solved: Producer–Consumer (bounded buffer) with semaphores
+### 5.6 Solved: Producer-Consumer (bounded buffer) with semaphores
 We need three semaphores:
 - `mutex = 1` (protect buffer)
 - `empty = N` (empty slots)
@@ -393,7 +404,7 @@ while true:
 - show correct wait/signal order
 - explain that `mutex` prevents race, `empty/full` enforce buffer bounds
 
-### 5.7 Solved: Readers–Writers (basic)
+### 5.7 Solved: Readers-Writers (basic)
 Goal: many readers can read together; writers need exclusive access.
 
 Semaphores:
@@ -474,25 +485,25 @@ Processes:
 Start all in Q0.
 
 1) Q0 RR (q=2)
-- P1 runs 2 (remaining 3) uses full q → demote to Q1
-- P2 runs 2 (remaining 1) uses full q → demote to Q1
-- P3 runs 2 (remaining 6) uses full q → demote to Q1
+- P1 runs 2 (remaining 3) uses full q -> demote to Q1
+- P2 runs 2 (remaining 1) uses full q -> demote to Q1
+- P3 runs 2 (remaining 6) uses full q -> demote to Q1
 
 2) Q1 RR (q=4)
 - P1 runs 3 (finishes) because it needs only 3 (<4)
 - P2 runs 1 (finishes)
-- P3 runs 4 (remaining 2) uses full q → demote to Q2
+- P3 runs 4 (remaining 2) uses full q -> demote to Q2
 
 3) Q2 FCFS
 - P3 runs remaining 2 and finishes
 
 **Gantt chart (time):**
-- 0–2 P1 | 2–4 P2 | 4–6 P3 | 6–9 P1 | 9–10 P2 | 10–14 P3 | 14–16 P3
+- 0-2 P1 | 2-4 P2 | 4-6 P3 | 6-9 P1 | 9-10 P2 | 10-14 P3 | 14-16 P3
 
 Now compute:
 - Completion times: P1=9, P2=10, P3=16
 - Turnaround time (AT=0): TAT = CT
-- Waiting time: WT = TAT − BT
+- Waiting time: WT = TAT - BT
 
 | Process | BT | CT | TAT | WT |
 |---|---:|---:|---:|---:|
@@ -554,7 +565,7 @@ flowchart LR
 ```
 
 Pros:
-- matches programmer’s view
+- matches programmer's view
 - supports protection/sharing per segment
 
 Cons:
@@ -566,7 +577,7 @@ Cons:
 |---|---|---|
 | Unit size | fixed | variable |
 | Fragmentation | internal | external |
-| View | hardware/OS view | programmer’s logical view |
+| View | hardware/OS view | programmer's logical view |
 | Table entry | page->frame | base+limit |
 | Protection | per page | per segment |
 
@@ -666,28 +677,28 @@ Processes:
 
 #### A) First Fit
 Start from beginning each time:
-- P1=212 goes to B2=500 → remaining B2=288
-- P2=417 goes to B5=600 → remaining B5=183
-- P3=112 goes to B2=288 → remaining B2=176
-- P4=426 cannot fit in B1=100, B2=176, B3=200, B4=300, B5=183 → not allocated
+- P1=212 goes to B2=500 -> remaining B2=288
+- P2=417 goes to B5=600 -> remaining B5=183
+- P3=112 goes to B2=288 -> remaining B2=176
+- P4=426 cannot fit in B1=100, B2=176, B3=200, B4=300, B5=183 -> not allocated
 
 Result (First Fit): P4 not allocated.
 
 #### B) Best Fit
 Choose smallest hole that fits:
-- P1=212 fits best in B4=300 → remaining B4=88
-- P2=417 fits best in B2=500 → remaining B2=83
-- P3=112 fits best in B3=200 → remaining B3=88
-- P4=426 fits best in B5=600 → remaining B5=174
+- P1=212 fits best in B4=300 -> remaining B4=88
+- P2=417 fits best in B2=500 -> remaining B2=83
+- P3=112 fits best in B3=200 -> remaining B3=88
+- P4=426 fits best in B5=600 -> remaining B5=174
 
 Result (Best Fit): all allocated.
 
 #### C) Worst Fit
 Choose largest hole:
-- P1=212 goes to B5=600 → remaining B5=388
-- P2=417 goes to B2=500 → remaining B2=83
-- P3=112 goes to B5=388 → remaining B5=276
-- P4=426 cannot fit (largest is 300 or 276) → not allocated
+- P1=212 goes to B5=600 -> remaining B5=388
+- P2=417 goes to B2=500 -> remaining B2=83
+- P3=112 goes to B5=388 -> remaining B5=276
+- P4=426 cannot fit (largest is 300 or 276) -> not allocated
 
 Result (Worst Fit): P4 not allocated.
 
@@ -727,39 +738,66 @@ Work it step-by-step (frames shown as [F1 F2 F3]):
 - 7: [7 _ _] F=1
 - 0: [7 0 _] F=2
 - 1: [7 0 1] F=3
-- 2: replace 7 → [2 0 1] F=4
+- 2: replace 7 -> [2 0 1] F=4
 - 0: hit
-- 3: replace 0 → [2 3 1] F=5
-- 0: replace 1 → [2 3 0] F=6
-- 4: replace 2 → [4 3 0] F=7
-- 2: replace 3 → [4 2 0] F=8
-- 3: replace 0 → [4 2 3] F=9
-- 0: replace 4 → [0 2 3] F=10
+- 3: replace 0 -> [2 3 1] F=5
+- 0: replace 1 -> [2 3 0] F=6
+- 4: replace 2 -> [4 3 0] F=7
+- 2: replace 3 -> [4 2 0] F=8
+- 3: replace 0 -> [4 2 3] F=9
+- 0: replace 4 -> [0 2 3] F=10
 - 3: hit
 - 2: hit
 
-✅ FIFO faults = **10**
+Result: FIFO faults = **10**
 
 #### B) LRU (Least Recently Used)
 Rule: evict the page that was used least recently.
 
-(You track “last used time” for each page.)
+(Track "last used time" for each page.)
 
-A compact but exam-acceptable way:
-- Use the same step process; on fault, remove page with oldest last-use.
+Work it step-by-step (frames shown as [F1 F2 F3]):
+- 7: [7 _ _] F=1
+- 0: [7 0 _] F=2
+- 1: [7 0 1] F=3
+- 2: replace 7 (LRU) -> [2 0 1] F=4
+- 0: hit
+- 3: replace 1 (LRU) -> [2 0 3] F=5
+- 0: hit
+- 4: replace 2 (LRU) -> [4 0 3] F=6
+- 2: replace 3 (LRU) -> [4 0 2] F=7
+- 3: replace 0 (LRU) -> [4 3 2] F=8
+- 0: replace 4 (LRU) -> [0 3 2] F=9
+- 3: hit
+- 2: hit
 
-✅ LRU faults for this case (3 frames) = **9**
+Result: LRU faults (3 frames) = **9**
 
 #### C) OPT / OPR (Optimal)
 Rule: evict the page whose next use is farthest in the future.
 
-✅ OPT faults for this case (3 frames) = **7**
+Work it step-by-step (frames shown as [F1 F2 F3]):
+- 7: [7 _ _] F=1
+- 0: [7 0 _] F=2
+- 1: [7 0 1] F=3
+- 2: replace 7 (never used again) -> [2 0 1] F=4
+- 0: hit
+- 3: replace 1 (never used again) -> [2 0 3] F=5
+- 0: hit
+- 4: replace 0 (next used farthest) -> [2 4 3] F=6
+- 2: hit
+- 3: hit
+- 0: replace 4 (never used again) -> [2 0 3] F=7
+- 3: hit
+- 2: hit
+
+Result: OPT faults (3 frames) = **7**
 
 **Exam tip:** If your teacher requires full tables for LRU/OPT, you should draw the frame table fully; the rule is the scoring part.
 
 ---
 
-## 12) Disk scheduling numericals: FCFS, SCAN, C‑SCAN, LOOK
+## 12) Disk scheduling numericals: FCFS, SCAN, C-SCAN, LOOK
 
 ### 12.1 Disk scheduling setup
 We have:
@@ -774,7 +812,7 @@ Initial head = 53
 Disk range = 0..199
 
 #### A) FCFS
-Order: 53 → 98 → 183 → 37 → 122 → 14 → 124 → 65 → 67
+Order: 53 -> 98 -> 183 -> 37 -> 122 -> 14 -> 124 -> 65 -> 67
 Movement:
 - |53-98|=45
 - |98-183|=85 (total 130)
@@ -785,7 +823,7 @@ Movement:
 - |124-65|=59 (638)
 - |65-67|=2 (640)
 
-✅ FCFS total movement = **640**
+Result: FCFS total movement = **640**
 
 #### B) SCAN (elevator)
 Assume direction is toward 0 first.
@@ -794,7 +832,7 @@ Service requests on the way down, go to 0, then reverse.
 Down from 53: 37, 14 then go to 0
 Up: 65, 67, 98, 122, 124, 183
 
-Path: 53 → 37 → 14 → 0 → 65 → 67 → 98 → 122 → 124 → 183
+Path: 53 -> 37 -> 14 -> 0 -> 65 -> 67 -> 98 -> 122 -> 124 -> 183
 Movement:
 - |53-37|=16
 - |37-14|=23 (39)
@@ -806,30 +844,30 @@ Movement:
 - |122-124|=2 (177)
 - |124-183|=59 (236)
 
-✅ SCAN total movement = **236**
+Result: SCAN total movement = **236**
 
-#### C) C‑SCAN
+#### C) C-SCAN
 Assume direction toward 0 first.
-C‑SCAN goes in one direction only; after reaching end, it jumps to the other end.
+C-SCAN goes in one direction only; after reaching end, it jumps to the other end.
 
 Down: 37, 14, 0
-Jump: 0 → 199
+Jump: 0 -> 199
 Continue down (from 199): 183, 124, 122, 98, 67, 65
 
-Path: 53 → 37 → 14 → 0 → 199 → 183 → 124 → 122 → 98 → 67 → 65
+Path: 53 -> 37 -> 14 -> 0 -> 199 -> 183 -> 124 -> 122 -> 98 -> 67 -> 65
 Movement:
-- 53→37 =16
-- 37→14 =23 (39)
-- 14→0 =14 (53)
-- 0→199 =199 (252)
-- 199→183 =16 (268)
-- 183→124 =59 (327)
-- 124→122 =2 (329)
-- 122→98 =24 (353)
-- 98→67 =31 (384)
-- 67→65 =2 (386)
+- 53->37 =16
+- 37->14 =23 (39)
+- 14->0 =14 (53)
+- 0->199 =199 (252)
+- 199->183 =16 (268)
+- 183->124 =59 (327)
+- 124->122 =2 (329)
+- 122->98 =24 (353)
+- 98->67 =31 (384)
+- 67->65 =2 (386)
 
-✅ C‑SCAN total movement = **386**
+Result: C-SCAN total movement = **386**
 
 #### D) LOOK
 LOOK is like SCAN but does not go to the physical end if no request there.
@@ -838,24 +876,24 @@ Assume direction toward 0 first.
 Down: 37, 14 (stop at 14, not 0)
 Reverse up: 65, 67, 98, 122, 124, 183
 
-Path: 53 → 37 → 14 → 65 → 67 → 98 → 122 → 124 → 183
+Path: 53 -> 37 -> 14 -> 65 -> 67 -> 98 -> 122 -> 124 -> 183
 Movement:
-- 53→37=16
-- 37→14=23 (39)
-- 14→65=51 (90)
-- 65→67=2 (92)
-- 67→98=31 (123)
-- 98→122=24 (147)
-- 122→124=2 (149)
-- 124→183=59 (208)
+- 53->37=16
+- 37->14=23 (39)
+- 14->65=51 (90)
+- 65->67=2 (92)
+- 67->98=31 (123)
+- 98->122=24 (147)
+- 122->124=2 (149)
+- 124->183=59 (208)
 
-✅ LOOK total movement = **208**
+Result: LOOK total movement = **208**
 
 ---
 
 ## 13) Virtual Memory numerical (one high-yield type)
 
-Your teacher said “From Virtual Memory (Numerical)”. The most common exam numerical is **Effective Access Time (EAT)** with TLB and/or page faults.
+Your teacher said "From Virtual Memory (Numerical)". The most common exam numerical is **Effective Access Time (EAT)** with TLB and/or page faults.
 
 ### 13.1 EAT with TLB (solved)
 Assume:
@@ -873,7 +911,7 @@ EAT = (hit ratio) * hit time + (miss ratio) * miss time
 = 88 + 42
 = 130 ns
 
-✅ Effective Access Time = **130 ns**
+Result: Effective Access Time = **130 ns**
 
 ### 13.2 Optional: add page-fault penalty (if asked)
 If page fault rate is p and page-fault service time is huge (ms), EAT increases a lot.
@@ -883,7 +921,7 @@ In exams, always:
 
 ---
 
-## 14) Extra: “Possible exam questions” (solved)
+## 14) Extra: "Possible exam questions" (solved)
 
 ### 14.1 Short answers
 1) Define kernel.
@@ -896,7 +934,7 @@ In exams, always:
 - Multiprocessing = multiple CPUs/cores; multithreading = multiple threads inside a process.
 
 ### 14.2 Algorithm questions
-1) Write Banker’s safety algorithm.
+1) Write Banker's safety algorithm.
 - Write the Work/Finish loop (Section 4.4).
 
 2) Write producer-consumer semaphore pseudocode.
@@ -912,7 +950,7 @@ In exams, always:
 - Kernel: definition + user vs kernel mode diagram
 - System calls: steps + API vs syscall diagram
 - Multiprocessing vs multithreading: comparison table
-- Banker’s: tables (Available/Max/Allocation/Need) + safe sequence method
+- Banker's: tables (Available/Max/Allocation/Need) + safe sequence method
 - Semaphores: wait/signal + producer-consumer pseudocode
 - MLFQ: rules + one worked schedule
 - Paging vs segmentation: table + address formats
@@ -928,7 +966,7 @@ This section adds MORE solved numericals + FULL step-by-step algorithm writing. 
 
 ---
 
-### 16.1 Bankers Algorithm - full Request solved numerical (GRANT / DENY)
+### 16.1 Banker's Algorithm - full Request solved numerical (GRANT / DENY)
 
 Using the same idea as Section 4.
 
@@ -1006,7 +1044,7 @@ No safe sequence -> DENY and rollback.
 
 ---
 
-### 16.2 Bankers Algorithm - exam-ready pseudocode
+### 16.2 Banker's Algorithm - exam-ready pseudocode
 
 ```text
 SafetyCheck(Available, Allocation, Need):
